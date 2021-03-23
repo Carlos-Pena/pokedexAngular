@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "Pokedex"
+  "defaultProject": "Pokedex",
+  "cli": {
+    "analytics": false
+  }
 }
