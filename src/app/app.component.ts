@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PokeApiService } from './poke-api.service'
 
 @Component({
@@ -6,25 +6,42 @@ import { PokeApiService } from './poke-api.service'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  i = 0
   title = 'Pokedex';
-  public pokemonListData =new Array
-  pokemonSelecte:number = 0; //default 0
+  pokemonListData:any = []
+  selectedPokemon:any = {}
+  
   constructor(private pokeApiService : PokeApiService){
+    this.cargarListaPokemon()
   }
 
   ngOnInit() {
-    this.cargarListaPokemon()    
+            
+  }
+  
+  setPokemon(id:number){    
+    this.selectedPokemon = this.pokemonListData[id-1]
   }
 
-  ordenar(){
+  ngDoCheck(){
     
-    this.pokemonListData.sort(function (a, b) {
-      return a.id - b.id
-  });
+    if(this.pokemonListData.length==24){      
+      this.pokemonListData.sort(function (a:any, b:any) {
+        return a.id - b.id
+    } ) ; 
+    } 
   }
+
+  ngAfterViewInit(): void {
+   
+    
+  }
+      
+  
+
   cargarListaPokemon(){
-    for (let i = 1; i <=20; i++) {
+    for (let i = 1; i <=24; i++) {
       this.pokeApiService.getPokemonData(i).subscribe(pokemon => {       
         this.pokemonListData.push(pokemon) 
       })

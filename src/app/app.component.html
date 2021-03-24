@@ -1,24 +1,29 @@
-<h1>PokéDex</h1>
-<!-- <router-outlet></router-outlet> -->
+<div class="global">
+  <header class="encabezado">
+    <h1>{{title}}</h1>
+  </header>
 
+  <section class="contenido">
 
-<div class="container">
+    <section class="contenido-detalles">
+      <article class="detalle-pokemon">
+        <h3>Detalles Pokemon</h3>
+        <app-pokemon-view *ngIf="selectedPokemon.name" [entrada]="selectedPokemon"></app-pokemon-view>
+      </article>
 
-  <div class="pokemonsDataContent" *ngIf="pokemonListData">
+    </section>
 
-    <div class="aboutPokemon">
+    <aside class="list-pokemon">
+      <h2 class="list-title">Lista Pokemon</h2>
 
-    </div>
+      <ul class="pokemon-items">
+        <li (click)="setPokemon(pokemon.id)" class="items" *ngFor="let pokemon of pokemonListData">
+          <p>N° {{pokemon.id}}</p>
+          <span href="#">{{pokemon.name}}</span>
+          <img src="https://www.pkparaiso.com/imagenes/xy/sprites/animados/{{pokemon.name}}.gif" alt="">
+        </li>
+      </ul>
+    </aside>
 
-    <div class="listPokemon" *ngFor="let pokemon of pokemonListData">
-
-      <h2>#{{pokemon.id}}</h2>
-      <span href="#">{{pokemon.name}}</span>
-      <img src="https://pokeres.bastionbot.org/images/pokemon/{{pokemon.id}}.png" alt=""> <!--Consumo imagen de otro URL-->
-      {{ordenar()}}
-    </div>    
-
-  </div>
-
-
+  </section>
 </div>

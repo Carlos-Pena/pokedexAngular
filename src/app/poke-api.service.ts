@@ -5,12 +5,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PokeApiService {
-
+  pokemonView: any = {}
   constructor(private http: HttpClient) { }
-
-  getListPokemons(): Observable<any> {
-    return this.http.get('https://pokeapi.co/api/v2/pokemon/')
-  }
 
   getPokemonData(id:number):Observable<any> {
     return this.http.get('https://pokeapi.co/api/v2/pokemon/' +id)
