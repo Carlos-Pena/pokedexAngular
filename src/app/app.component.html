@@ -20,7 +20,7 @@
         <li (click)="setPokemon(pokemon.id)" class="items" *ngFor="let pokemon of pokemonListData">
           <p>N° {{pokemon.id}}</p>
           <span href="#">{{pokemon.name}}</span>
-          <img src="https://www.pkparaiso.com/imagenes/xy/sprites/animados/{{pokemon.name}}.gif" alt="">
+          <img class="pokemon-img-items" src="https://www.pkparaiso.com/imagenes/xy/sprites/animados/{{pokemon.name}}.gif" alt="">
         </li>
       </ul>
     </aside>

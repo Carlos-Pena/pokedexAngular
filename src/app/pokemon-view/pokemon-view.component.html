@@ -1,6 +1,62 @@
-<div *ngIf="pokemon">
-  <h2>{{pokemon.name}}</h2>
-  <h2>{{pokemon.id}}</h2>
-  <p>{{pokemon.height}}</p>
-</div>
+<div *ngIf="pokemon">  
 
+  <section class="pokemon-name">
+    <h3 class="pokemon-name">{{pokemon.name}}</h3>
+  </section>
+  <section class="pokemon-review">    
+    <div class="pokemon-1">
+      <section class="img-pokemon-review">
+        <img class="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{pokemon.id}}.png" alt="">
+      </section>
+      <section class="pokemon-type">
+        <span class="{{pokemon.types[0].type.name}}">{{pokemon.types[0].type.name}}
+        </span>
+        <span *ngIf="pokemon.types[1]" class="{{pokemon.types[1].type.name}}">{{pokemon.types[1].type.name}}
+        </span>
+      </section>
+    </div>
+    <div class="pokemon-2">
+      <h3>Estadísticas</h3>
+      
+      <section class="stats-grafica">
+
+        <table class="table">      
+          <tbody>
+            <tr>
+              <th scope="row">HP</th>
+              <td>{{pokemon.stats[0].base_stat}}</td>
+              <td><progress value="{{pokemon.stats[0].base_stat}}" max="180"></progress></td>
+            </tr>
+            <tr>
+              <th scope="row">ATK</th>
+              <td>{{pokemon.stats[1].base_stat}}</td>
+              <td><progress value="{{pokemon.stats[1].base_stat}}" max="180"></progress></td>
+            </tr>
+            <tr>
+              <th scope="row">DEF</th>
+              <td>{{pokemon.stats[2].base_stat}}</td>
+              <td><progress value="{{pokemon.stats[2].base_stat}}" max="180"></progress></td>
+            </tr>
+            <tr>
+              <th scope="row">ATK-ESP</th>
+              <td>{{pokemon.stats[3].base_stat}}</td>
+              <td><progress value="{{pokemon.stats[3].base_stat}}" max="180"></progress></td>
+            </tr>
+            <tr>
+              <th scope="row">DEF-ESP</th>
+              <td>{{pokemon.stats[4].base_stat}}</td>
+              <td><progress value="{{pokemon.stats[4].base_stat}}" max="180"></progress></td>
+            </tr>
+            <tr>
+              <th scope="row">VEL</th>
+              <td>{{pokemon.stats[5].base_stat}}</td>
+              <td><progress value="{{pokemon.stats[5].base_stat}}" max="180"></progress></td>
+            </tr>
+          </tbody>
+        </table>
+
+         
+      </section>
+    </div>    
+  </section>
+</div>

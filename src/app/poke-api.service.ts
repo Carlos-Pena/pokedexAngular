@@ -12,4 +12,10 @@ export class PokeApiService {
     return this.http.get('https://pokeapi.co/api/v2/pokemon/' +id)
   }
 
+  async getPokemon(id:number) {
+    return new Promise((resolve, reject)=>{
+      this.getPokemonData(id).subscribe(pokemon=>resolve(pokemon))
+    })
+  }
+
 }

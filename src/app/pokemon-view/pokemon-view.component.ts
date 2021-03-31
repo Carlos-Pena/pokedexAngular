@@ -8,12 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PokemonViewComponent implements OnInit {
   @Input('entrada') pokemon:any
   constructor() {
-   
+    
    }
 
    ngOnChanges(){
-     //console.log("ngOnChange")
-     
+     //console.log("ngOnChange")     
    }
 
   ngOnInit(): void {

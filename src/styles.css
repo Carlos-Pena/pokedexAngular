@@ -4,7 +4,7 @@
 
 html,
 body {
-    font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   height: 100%;
   background: url("https://images.alphacoders.com/201/201831.png") center;
 }
@@ -21,13 +21,14 @@ body {
 }
 
 li {
-	margin: 0px;
-	padding: 0px;
-	
+  margin: 0px;
+  padding: 0px;
+
 }
+
 ul {
-	margin: 0px;
-	padding: 20px;
+  margin: 0px;
+  padding: 20px;
 }
 
 
@@ -36,7 +37,7 @@ h2 {
   text-transform: uppercase;
 }
 
-img {
+.pokemon-img-items {
   height: 25px;
   width: 25px;
   background: white;
@@ -55,7 +56,7 @@ img {
 
 .detalle-pokemon {
   height: 100%;
-  background: rgba(255, 255, 255, 0.699);
+  background: rgba(255, 255, 255, 0.404);
 }
 
 .detalle-pokemon h3 {
@@ -87,7 +88,7 @@ img {
 }
 
 .pokemon-items li {
-    text-transform: capitalize;
+  text-transform: capitalize;
   cursor: pointer;
   list-style: none;
   text-decoration: none;
@@ -96,14 +97,16 @@ img {
   height: 35px;
   background: white;
   border-radius: 30px;
-  transition:all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   background: rgb(214, 211, 211);
-    overflow: hidden;
+  overflow: hidden;
 }
+
 .pokemon-items li:hover {
-    -webkit-transform:scale(1.1);transform:scale(1.1);
-    background: white;
-    border-radius: 20px;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background: white;
+  border-radius: 20px;
 }
 
 .pokemon-items li p {
@@ -116,4 +119,130 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.pokemon-name {
+  text-transform: uppercase;
+}
+
+.pokemon-img {
+  height: 200px;
+  width: 200px;
+}
+
+.pokemon-review {
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pokemon-type span {
+  margin-right: 5px;
+  border-radius: 30px;
+  line-height: 25px;
+  text-align: center;
+  display: inline-block;
+  border: 3px solid black;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 25px;
+  width: 80px;
+
+}
+
+.bug {
+  background: radial-gradient(at bottom right, rgb(110, 148, 54), white);
+}
+
+.dragon {
+  background: radial-gradient(at bottom right, rgb(71, 61, 211), white);
+}
+
+.dark {
+  background: radial-gradient(at bottom right, rgb(22, 20, 17), white);
+ 
+}
+
+.electric {
+  background: radial-gradient(at bottom right, rgb(255, 202, 29), white);
+ 
+}
+
+.fairy {
+  background: radial-gradient(at bottom right, rgb(255, 180, 249), white);
+ 
+}
+
+.fighting {
+  background: radial-gradient(at bottom right, rgb(75, 26, 4), white);
+ 
+}
+
+.fire {
+  background: radial-gradient(at bottom right, rgb(207, 48, 0), white);
+ 
+}
+
+.flying {
+  background: radial-gradient(at bottom right, rgb(56, 102, 252), white);
+ 
+}
+
+.ghost {
+  background: radial-gradient(at bottom right, rgb(27, 17, 114), white);
+ 
+}
+
+.grass {
+  background: radial-gradient(at bottom right, rgb(13, 194, 22), white);
+ 
+}
+
+.ground {
+  background: radial-gradient(at bottom right, rgb(161, 128, 78), white);
+ 
+}
+
+.ice {
+  background: radial-gradient(at bottom right, rgb(73, 201, 240), white);
+ 
+}
+
+.normal {
+  background: radial-gradient(at bottom right, rgb(192, 192, 192), white);
+ 
+}
+
+.poison {
+  background: radial-gradient(at bottom right, rgb(74, 23, 133), rgb(255, 255, 255));
+}
+
+.psychic {
+  background: radial-gradient(at bottom right, rgb(243, 56, 134), rgb(255, 255, 255));
+
+}
+
+.rock {
+  background: radial-gradient(at bottom right, rgb(121, 95, 56), rgb(255, 255, 255));
+
+}
+
+.steel {
+  background: radial-gradient(at bottom right, rgb(175, 175, 175), rgb(255, 255, 255));
+
+}
+
+.water {
+  background: radial-gradient(at bottom right, rgb(0, 89, 255), rgb(255, 255, 255));
+
+}
+
+td{
+  width:30px;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 6px;
+  text-align: left;
 }
